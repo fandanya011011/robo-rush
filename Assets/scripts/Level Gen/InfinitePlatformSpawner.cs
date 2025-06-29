@@ -33,6 +33,7 @@ public class InfinitePlatformSpawner : PlatformSpawner
         if (playerTransform.position.z > spawnCoordinate - (maxPlatformCount * platformLength))
         {
             SpawnPlatform(GetRandomPlatform());
+            SpawnCoin(spawnCoordinate);
             RemovePlatform();
         }
     }

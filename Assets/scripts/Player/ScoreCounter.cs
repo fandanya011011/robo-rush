@@ -27,4 +27,10 @@ public class ScoreCounter : Score
         shouldCount = false;
         SetNewBestScore(Mathf.FloorToInt(score));
     }
+
+    public void LoosePoints(int num)
+    {
+        score -= num;
+        scoreText.text = Mathf.FloorToInt(score).ToString();
+    }
 }
